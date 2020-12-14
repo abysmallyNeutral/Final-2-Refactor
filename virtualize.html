@@ -1,36 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <meta charset="UTF-8">
     <title>Virtualization and Containerization</title>
+
+    <!--    Bootstrap CDN    -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!--    Font Awesome-->
+    <script src="https://kit.fontawesome.com/0cb92166ae.js" crossorigin="anonymous"></script>
+
+    <!---------favicon----------->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon_io/site.webmanifest">
 </head>
-<body>
+<body style="background-color: #b57edc;">
+
 <!--Top Navigation Bar-->
-<div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">Cloud Technology</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+<nav class="navbar navbar-expand-md navbar-light" style="background-color: #b57edc;">
+    <a class="navbar-brand" href="index.html"><i class="fas fa-crow"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="center">
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
-
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Cloud Technology<span class="sr-only">(current)</span>
                     </a>
                     <!--Dropdown Menu-->
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="virtualize.html">Virtualization and Containerization<span class="sr-only">(current)</span></a>
+                        <a class="dropdown-item" href="virtualize.html">Virtualization and Containerization</a>
                         <a class="dropdown-item" href="dataCenters.html">Data Centers and the Cloud</a>
                         <a class="dropdown-item" href="docker.html">Kubernetes and Docker</a>
                         <a class="dropdown-item" href="createRepository.html">Creating a Docker Repository</a>
@@ -38,70 +47,77 @@
                 </li>
             </ul>
         </div>
-    </nav>
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item" aria-current="page">Cloud Technology</li>
-            <li class="breadcrumb-item active" aria-current="page">Virtualization and Containerization</li>
-        </ol>
-    </nav>
+    </div>
+</nav>
 
+<div class="carousel-inner expand-sm">
+    <!--    Top Image-->
+    <img src="img/virtualize.jpg" style="width: 1400px;height: 700px;" alt="title">
+    <div class="carousel-caption" style="vertical-align:top;margin:250px -400px;">
+        <h1>
+            Virtualization and Containerization
+        </h1>
+    </div>
+</div>
+
+<div class="row">
     <div class="row">
-        <div class="row">
-            <div class="col-8">
-                <h1>Virtualization and Containerization</h1>
-                <img width="100%" height="auto" src="img/virtualize.jpg" alt="virtualize">
-                <p>
-                    Virtualization is the concept of separating the logical desktop from the physical machine.
-                </p>
-                <ul>
-                    <li>
-                        One form of desktop virtualization, virtual desktop infrastructure (VDI), can be thought of as a
-                        more advanced form of hardware virtualization. Rather than interacting with a host computer directly
-                        via a keyboard, mouse, and monitor, the user interacts with the host computer using another desktop
-                        computer or a mobile device by means of a network connection, such as a LAN, Wireless LAN or even the Internet.
-                    </li>
-                </ul>
+        <div class="col-2 text-center">
 
-                <p>
-                    Containerization, also known as OS level virtualization, refers to an operating system feature in which
-                    the kernel allows the existence of multiple isolated user-space instances. Such instances, called containers,
-                    may look like real computers from the point of view of programs running in them. A computer program running
-                    on an ordinary operating system can see all resources (connected devices, files and folders, network shares,
-                    CPU power, quantifiable hardware capabilities) of that computer.
-                </p>
-                <ul>
-                    <li>
-                        However, programs running inside a container can only see the container's contents and devices assigned to the container.
-                    </li>
-                </ul>
-                <a href="https://opensource.com/resources/virtualization">
-                    More information
-                </a>
+        </div>
+        <div class="col-6 pt 3">
+<!--            Video Here-->
+
+            <div class="center" style="text-align: center">
+                <h1>
+                    Virtualization and Containerization
+                </h1>
+                <hr style="width: 100px" class="my-3">
             </div>
+            <p>
+                Virtualization is the concept of separating the logical desktop from the physical machine.
+            </p>
+            <ul>
+                <li>
+                    One form of desktop virtualization, virtual desktop infrastructure (VDI), can be thought of as a
+                    more advanced form of hardware virtualization. Rather than interacting with a host computer directly
+                    via a keyboard, mouse, and monitor, the user interacts with the host computer using another desktop
+                    computer or a mobile device by means of a network connection, such as a LAN, Wireless LAN or even the Internet.
+                </li>
+            </ul>
 
-            <div class="col-4">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-header">
-                        Cloud Technology
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Virtualization and Containerization</li>
-                        <li class="list-group-item"><a class="dropdown-item" href="dataCenters.html">Data Centers and the Cloud</a></li>
-                        <li class="list-group-item"><a class="dropdown-item" href="docker.html">Kubernetes and Docker</a></li>
-                        <li class="list-group-item"><a class="dropdown-item" href="createRepository.html">Creating a Docker Repository</a></li>
-                    </ul>
+            <p>
+                Containerization, also known as OS level virtualization, refers to an operating system feature in which
+                the kernel allows the existence of multiple isolated user-space instances. Such instances, called containers,
+                may look like real computers from the point of view of programs running in them. A computer program running
+                on an ordinary operating system can see all resources (connected devices, files and folders, network shares,
+                CPU power, quantifiable hardware capabilities) of that computer.
+            </p>
+            <ul>
+                <li>
+                    However, programs running inside a container can only see the container's contents and devices assigned to the container.
+                </li>
+            </ul>
+            <a href="https://opensource.com/resources/virtualization">
+                More information
+            </a>
+        </div>
+
+        <div class="col-4">
+            <div class="card" style="width: 18rem; background-color: #8634c0;">
+                <div class="card-header">
+                    <h2>Cloud Technology</h2>
                 </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a class="dropdown-item" href="virtualize.html">Virtualization and Containerization</a></li>
+                    <li class="list-group-item"><a class="dropdown-item" href="dataCenters.html">Data Centers and the Cloud</a></li>
+                    <li class="list-group-item"><a class="dropdown-item" href="docker.html">Kubernetes and Docker</a></li>
+                    <li class="list-group-item"><a class="dropdown-item" href="createRepository.html">Creating a Docker Repository</a></li>
+                </ul>
             </div>
         </div>
     </div>
 </div>
-
-<!--Dropdown Menu Script-->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
+</div>
 </body>
 </html>
