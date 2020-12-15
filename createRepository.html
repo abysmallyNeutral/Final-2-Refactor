@@ -1,110 +1,124 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <meta charset="UTF-8">
     <title>Creating a Docker Repository</title>
+
+    <!--    Bootstrap CDN    -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!--    Font Awesome-->
+    <script src="https://kit.fontawesome.com/0cb92166ae.js" crossorigin="anonymous"></script>
+
+    <!---------favicon----------->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon_io/site.webmanifest">
 </head>
-<body>
+<body style="background-color: #b57edc;">
+
 <!--Top Navigation Bar-->
-<div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">Cloud Technology</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+<nav class="navbar navbar-expand-md navbar-light" style="background-color: #b57edc;">
+    <a class="navbar-brand" href="index.html"><i class="fas fa-crow"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="center">
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
-
+                <!--Dropdown Menu-->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Cloud Technology<span class="sr-only">(current)</span>
                     </a>
-                    <!--Dropdown Menu-->
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="virtualize.html">Virtualization and Containerization</a>
                         <a class="dropdown-item" href="dataCenters.html">Data Centers and the Cloud</a>
                         <a class="dropdown-item" href="docker.html">Kubernetes and Docker</a>
-                        <a class="dropdown-item" href="createRepository.html">Creating a Docker Repository<span class="sr-only">(current)</span></a>
+                        <a class="dropdown-item" href="createRepository.html">Creating a Docker Repository</a>
                     </div>
                 </li>
             </ul>
         </div>
-    </nav>
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item" aria-current="page">Cloud Technology</li>
-            <li class="breadcrumb-item active" aria-current="page">Creating a Docker Repository</li>
-        </ol>
-    </nav>
+    </div>
+</nav>
 
+<div class="carousel-inner expand-sm">
+    <!--    Top Image-->
+    <img src="img/background.jpg" style="width: 1400px;height: 700px;" alt="title">
+    <div class="carousel-caption" style="vertical-align:top;margin:250px -400px;">
+        <h1>
+            Creating a Docker Repository
+        </h1>
+    </div>
+</div>
+
+<div class="row">
     <div class="row">
-        <div class="row">
-            <div class="col-8">
-                <h1>Creating a Docker Repository</h1>
-                <img width="100%" height="auto" src="img/createRepository.jpg" alt="repository">
-                <ol>
-                    <li>
-                        Fill out the repository details (be sure to set the Visibility drop-down to either public or
-                        private), then click Create.
-                    </li>
-                    <li>
-                        On the next page you will find details about your new repository, including the docker pull
-                        command for your images.
-                    </li>
-                </ol>
-
-                <p>
-                    <b>Pushing an Image to Your Docker Hub Repository</b>
-                </p>
-
-                <p>
-                    To upload (push) an image to your Docker Hub repository, you must first prepare the image. It will need:
-                </p>
-
-                <ul>
-                    <li>
-                        Your Docker Hub username or the name of your Docker Hub organization.
-                    </li>
-                    <li>
-                        The name of your Docker Hub repository.
-                    </li>
-                    <li>
-                        Optional: A version tag. (If no tag is specified, it will default to "latest.")
-                    </li>
-                </ul>
+        <div class="col-2 text-center"></div>
+        <div class="col-6 pt 3">
+            <div class="center" style="text-align: center">
+                <h1>
+                    Creating a Docker Repository
+                </h1>
+                <hr style="width: 100px" class="my-3">
             </div>
 
-            <div class="col-4">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-header">
-                        Cloud Technology
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><a class="dropdown-item" href="virtualize.html">Virtualization and Containerization</a></li>
-                        <li class="list-group-item"><a class="dropdown-item" href="dataCenters.html">Data Centers and the Cloud</a></li>
-                        <li class="list-group-item"><a class="dropdown-item" href="docker.html">Kubernetes and Docker</a></li>
-                        <li class="list-group-item">Creating a Docker Repository</li>
-                    </ul>
+            <img width="100%" height="auto" src="img/createRepository.jpg" alt="repository">
+            <ol>
+                <li>
+                    Fill out the repository details (be sure to set the Visibility drop-down to either public or
+                    private), then click Create.
+                </li>
+                <li>
+                    On the next page you will find details about your new repository, including the docker pull
+                    command for your images.
+                </li>
+            </ol>
+
+            <p>
+                <b>Pushing an Image to Your Docker Hub Repository</b>
+            </p>
+
+            <p>
+                To upload (push) an image to your Docker Hub repository, you must first prepare the image. It will need:
+            </p>
+
+            <ul>
+                <li>
+                    Your Docker Hub username or the name of your Docker Hub organization.
+                </li>
+                <li>
+                    The name of your Docker Hub repository.
+                </li>
+                <li>
+                    Optional: A version tag. (If no tag is specified, it will default to "latest.")
+                </li>
+            </ul>
+        </div>
+        <!--        Side Card-->
+        <div class="col-4">
+            <div class="card" style="width: 18rem; background-color: #8634c0;">
+                <div class="card-header">
+                    <h2>Cloud Technology</h2>
                 </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a class="dropdown-item" href="virtualize.html">Virtualization and Containerization</a></li>
+                    <li class="list-group-item"><a class="dropdown-item" href="dataCenters.html">Data Centers and the Cloud</a></li>
+                    <li class="list-group-item"><a class="dropdown-item" href="docker.html">Kubernetes and Docker</a></li>
+                    <li class="list-group-item"><a class="dropdown-item" href="createRepository.html">Creating a Docker Repository</a></li>
+                </ul>
             </div>
         </div>
     </div>
 </div>
-
-<!--Dropdown Menu Script-->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
+</div>
 </body>
 </html>
